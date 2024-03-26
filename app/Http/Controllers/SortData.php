@@ -16,13 +16,13 @@ class SortData extends Controller
 
     public function sortDate()
     {
-        $data = Item::orderByDesc("date_created")->get();
+        $data = Item::orderBy("date_created")->get();
         return view("/index", compact("data"));
     }
 
     public function sortTime()
     {
-        $data = Item::orderByDesc("time_created")->get();
+        $data = Item::orderBy("time_created")->get();
         return view("/index", compact("data"));
     }
 }
